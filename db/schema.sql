@@ -55,6 +55,7 @@ CREATE TABLE cameras (
    rules_vector jsonb NOT NULL,
    map_pos jsonb,
    zones jsonb NOT NULL DEFAULT '[]',
+   extra jsonb NOT NULL DEFAULT '{}',   -- tiltAngle, tpuProgram, workers (поля интерфейса без своих колонок)
    created_at timestamptz NOT NULL DEFAULT now()
 );
 
